@@ -1,1 +1,69 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* body {
+  text-align: center;
+}
+
+* body h1 {
+  padding: 20px;
+}
+
+* body ul li {
+  list-style: none;
+  display: inline;
+  padding-right: 10px;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    text-align: center;
+  }
+  body h1 {
+    padding: 20px;
+  }
+  body ul li {
+    list-style: none;
+    display: inherit;
+  }
+  body #menu-open {
+    position: absolute;
+    padding-left: 1.25em;
+    top: 10px;
+    right: 10px;
+  }
+  body #menu-open:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.25em;
+    width: 1em;
+    height: 0.15em;
+    background: black;
+    -webkit-box-shadow: 0 0.25em 0 0 black,0 0.5em 0 0 black;
+            box-shadow: 0 0.25em 0 0 black,0 0.5em 0 0 black;
+  }
+  body #menu-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    text-decoration: none;
+  }
+  body #menu-close:after {
+    content: "\274c";
+    /* use the hex value here... */
+    font-size: 15px;
+    color: #FFF;
+    text-align: center;
+  }
+  body #menu-open, body #menu-close, body #menu-elements {
+    display: none;
+  }
+  body #menu-open.show, body #menu-close.show, body #menu-elements.show {
+    display: inherit;
+  }
+}
+/*# sourceMappingURL=style.css.map */

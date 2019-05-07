@@ -1,0 +1,76 @@
+// general for desktop and tablet
+* {
+    margin: 0;
+    padding: 0;
+
+    body {
+        text-align: center;
+        h1 {
+            padding: 20px;
+        }
+        ul {
+            
+            li {
+                list-style: none;
+                display: inline;
+                padding-right: 10px;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+
+// mobile
+@media only screen and (max-width: 375px) {
+    body {
+        text-align: center;
+        h1 {
+            padding: 20px;
+        }
+        ul {
+
+            li {
+                list-style: none;
+                display: inherit;
+            }
+        }
+        #menu-open {
+            position: absolute;
+            padding-left: 1.25em;
+            top: 10px;
+            right: 10px;
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0.25em;
+                width: 1em;
+                height: 0.15em;
+                background: black;
+                box-shadow: 0 0.25em 0 0 black,0 0.5em 0 0 black;
+                
+              }
+        }
+
+        #menu-close {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            text-decoration: none;
+            &:after {
+                content: "\274c"; /* use the hex value here... */
+                font-size: 15px; 
+                color: #FFF;
+                text-align: center;
+            }
+        }
+
+        #menu-open, #menu-close, #menu-elements {
+            display: none;
+            &.show {
+                display: inherit;
+            }
+        }
+    }   
+  }
